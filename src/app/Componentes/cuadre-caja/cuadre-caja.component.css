@@ -1,0 +1,13 @@
+.mat-form-field {
+  display: inline;
+}
+div.container-fluid{
+  background-image: url('http://rsgm.online/PreBankerSimulador/assets/LOGO_3.png');
+  background-repeat: repeat;
+}
+div.container{
+  background-color: white;
+}
+p{
+  margin-top: 40px;
+}

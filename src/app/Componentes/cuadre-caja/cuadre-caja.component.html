@@ -1,0 +1,134 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <h1>CUADRE CAJA</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>SOLES</h2>
+      </div>
+      <div class="col-md-6">
+        <h2>DOLARES</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <H4>N° Billetes</H4>
+        <form [formGroup]="forms">
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs200" placeholder="200"
+                   (change)="CS200($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs100" placeholder="100"
+                   (change)="CS100($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs50" placeholder="50" (change)="CS50($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs20" placeholder="20" (change)="CS20($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs10" placeholder="10" (change)="CS10($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs5" placeholder="5" (change)="CS5($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs2" placeholder="2" (change)="CS2($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs1" placeholder="1" (change)="CS1($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs050" placeholder="0.50"
+                   (change)="CS050($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs020" placeholder="0.20"
+                   (change)="CS020($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cs010" placeholder="0.10"
+                   (change)="CS010($event)">
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <H4>Monto</H4>
+        <p>Monto: {{monto200}}</p>
+        <p>Monto: {{monto100}}</p>
+        <p>Monto: {{monto50}}</p>
+        <p>Monto: {{monto20}}</p>
+        <p>Monto: {{monto10}}</p>
+        <p>Monto: {{monto5}}</p>
+        <p>Monto: {{monto2}}</p>
+        <p>Monto: {{monto1}}</p>
+        <p>Monto: {{monto050}}</p>
+        <p>Monto: {{monto020}}</p>
+        <p>Monto: {{monto010}}</p>
+      </div>
+
+      <div class="col-md-3">
+        <H4>N° Billetes</H4>
+        <form [formGroup]="formd">
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd100" placeholder="100"
+                   (change)="CD100($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd50" placeholder="50" (keyup)="CD50($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd20" placeholder="20" (keyup)="CD20($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd10" placeholder="10" (keyup)="CD10($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd5" placeholder="5" (keyup)="CD5($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd2" placeholder="2" (keyup)="CD2($event)">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" formControlName="cd1" placeholder="1" (keyup)="CD1($event)">
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <H4>Monto</H4>
+        <p>Monto: {{montod100}}</p>
+        <p>Monto: {{montod50}}</p>
+        <p>Monto: {{montod20}}</p>
+        <p>Monto: {{montod10}}</p>
+        <p>Monto: {{montod5}}</p>
+        <p>Monto: {{montod2}}</p>
+        <p>Monto: {{montod1}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <h4>TOTAL SOLES:</h4>
+      </div>
+      <div class="col-md-3">
+        <h4>{{totals1}}</h4>
+      </div>
+      <div class="col-md-3">
+        <h4>TOTAL DOLARES:</h4>
+      </div>
+      <div class="col-md-3">
+        <h4>{{totald1}}</h4>
+      </div>
+    </div>
+    <!--<div class="d-flex justify-content-center">
+      <h1>TOTAL: {{total}}</h1>
+    </div>-->
+    <div class="d-flex justify-content-center">
+      <button mat-raised-button color="primary" class="text-white" (click)="DialogMensaje()">ACEPTAR</button>
+      <mat-divider style=" margin: 10px;" [vertical]="true"></mat-divider>
+      <button mat-raised-button color="primary" class="text-white" (click)="Cancelar()">CANCELAR</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <h1>{{titulo}}</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <form [formGroup]="form" (ngSubmit)="ComprobarDatos()">
+          <mat-form-field *ngIf="idcuentav">
+            <input matInput type="text" formControlName="idcuenta" placeholder="N° CUENTA" (keyup)="Controlar($event)"
+                   #cuentaf autocomplete="off">
+            <mat-error *ngIf="isFieldInvalid('idcuenta')">
+              Ingrese un numero de cuenta
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field *ngIf="nombrev">
+            <input matInput type="text" formControlName="nombre" placeholder="NOMBRE" autocomplete="off">
+            <mat-error *ngIf="isFieldInvalid('nombre')">
+              Ingrese un nombre
+            </mat-error>
+          </mat-form-field>
+          <h4 *ngIf="preciov">TIPO DE CAMBIO: {{precio}}</h4>
+          <mat-form-field>
+            <input matInput type="number" formControlName="monto" placeholder="IMPORTE"
+                   (keyup.enter)="TipoCambio($event)"
+                   #importef autocomplete="off">
+            <mat-error *ngIf="isFieldInvalid('monto')">
+              Ingrese el importe
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input type="text" placeholder="Moneda" matInput formControlName="idmoneda" [matAutocomplete]="auto" #monedaf>
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option style="width:2000px;" *ngFor="let item of monedasfilter | async"
+                          (onSelectionChange)="Seleccionado(item.id)" [value]="item.nombre">
+                {{item.nombre}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <h4 *ngIf="totalv">Total: {{total}}</h4>
+          <div class="d-flex justify-content-center">
+            <button mat-raised-button color="primary" class="text-white" type="submit">ACEPTAR</button>
+            <mat-divider style=" margin: 10px;" [vertical]="true"></mat-divider>
+            <button mat-raised-button color="primary" class="text-white" (click)="Cancelar()">CANCELAR</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
+</div>

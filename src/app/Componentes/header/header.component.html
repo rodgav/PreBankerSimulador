@@ -1,0 +1,34 @@
+<div class="container-fluid text-center">
+  <img class="img-fluid"
+       src="http://rsgm.online/PreBankerSimulador/assets/LOGO_1.png"
+       alt="prebanker">
+</div>
+<mat-toolbar [fxShow]="true" color="primary" *ngIf="logeado">
+  <mat-divider style="height: 20px; margin: 05px;" [inset]="true"></mat-divider>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-select placeholder="Operaciones" formControlName="idoperaciones" (selectionChange)="Operaciones()">
+        <mat-option *ngFor="let item of operaciones" [value]="item.id"> {{item.nombre}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-divider style=" margin: 10px;" [vertical]="true"></mat-divider>
+    <mat-form-field>
+      <mat-select placeholder="Transacciones" formControlName="idtransacciones" (selectionChange)="Transacciones()" >
+        <mat-option *ngFor="let item of transacciones" [value]="item.id"> {{item.nombre}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-divider style=" margin: 10px;" [vertical]="true"></mat-divider>
+    <mat-form-field floatLabel="never">
+      <input type="number" placeholder="CODIGO" matInput formControlName="idtransaccion"
+             (keyup.enter)="Controlar($event)" #codigo autocomplete="off" >
+    </mat-form-field>
+    <span fxFlex></span>
+  </form>
+  <span fxFlex></span>
+  <button mat-button color="warn" (click)="CerraSesion()">
+    Cerrar Sesion
+  </button>
+  <mat-divider style="height: 20px; margin: 05px;" [inset]="true"></mat-divider>
+</mat-toolbar>
