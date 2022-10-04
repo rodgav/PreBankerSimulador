@@ -2,7 +2,7 @@
   display: inline;
 }
 div.container-fluid{
-  background-image: url('http://rsgm.online/PreBankerSimulador/assets/LOGO_3.png');
+  background-image: url('../../../assets/LOGO_3.png');
   background-repeat: repeat;
 }
 div.container{
