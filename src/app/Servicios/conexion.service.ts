@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
 })
 export class ConexionService {
 
-  private url = 'http://rsgm.online/APIPrebanker/V1/';
+  private url = 'https://api.prebanker/V1/';
 
   constructor(protected http: HttpClient) {
   }

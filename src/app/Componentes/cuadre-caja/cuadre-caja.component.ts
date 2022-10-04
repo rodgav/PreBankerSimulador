@@ -84,7 +84,7 @@ export class CuadreCajaComponent implements OnInit {
     this.Igualar();
   }
 
-  private DialogMensaje() {
+  public DialogMensaje() {
     let restas = 0;
     let restad = 0;
     if (this.totals0 > 0) {
