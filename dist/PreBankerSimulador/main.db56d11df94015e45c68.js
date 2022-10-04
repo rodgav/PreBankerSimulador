@@ -3267,7 +3267,7 @@ __webpack_require__.r(__webpack_exports__);
 var ConexionService = /** @class */ (function () {
     function ConexionService(http) {
         this.http = http;
-        this.url = 'http://api.prebanker/V1/';
+        this.url = 'https://prebanker.com/api/V1/';
     }
     ConexionService.prototype.servicio = function (object) {
         return this.http.post(this.url, object).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (res) { return res; }));
@@ -3645,4 +3645,4 @@ module.exports = __webpack_require__(/*! C:\Users\RODOLFO GAVILAN\Downloads\preb
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
-//# sourceMappingURL=main.66d59803da53f99af450.js.map
+//# sourceMappingURL=main.db56d11df94015e45c68.js.map
